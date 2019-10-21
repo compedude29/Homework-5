@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <title>Work Day Scheduler</title>
   </head>
 
@@ -32,11 +31,74 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-        <!-- Timeblocks go here -->
+      <!-- Timeblocks go here -->
+
+      <div class="row"> 
+        <div class ="hour">9:00AM</div>
         <textarea rows="4" cols="50">
-            Scheduling of Calendar goes here.
+          Scheduling of Calendar goes here.
         </textarea>
-        <button class="saveBtn"><span class="glyphicon glyphicon-floppy-disk">Save</span></button>
+        <button class="saveBtn">Save</button>
+      </div>
+      <div class="row"> 
+        <div class ="hour">10:00AM</div>
+        <textarea rows="4" cols="50">
+          Scheduling of Calendar goes here.
+        </textarea>
+        <button class="saveBtn">Save</button>
+      </div>
+      <div class="row"> 
+        <div class ="hour">11:00AM</div>
+        <textarea rows="4" cols="50">
+          Scheduling of Calendar goes here.
+        </textarea>
+        <button class="saveBtn">Save</button>
+      </div>
+      <div class="row"> 
+        <div class ="hour">12:00PM</div>
+        <textarea rows="4" cols="50">
+          Scheduling of Calendar goes here.
+        </textarea>
+        <button class="saveBtn">Save</button>
+      </div>
+      <div class="row"> 
+        <div class ="hour">1:00PM</div>
+        <textarea rows="4" cols="50">
+          Scheduling of Calendar goes here.
+        </textarea>
+        <button class="saveBtn">Save</button>
+      </div>
+      <div class="row"> 
+        <div class ="hour">2:00PM</div>
+        <textarea rows="4" cols="50">
+          Scheduling of Calendar goes here.
+        </textarea>
+        <button class="saveBtn">Save</button>
+      </div>
+      <div class="row"> 
+        <div class ="hour">3:00PM</div>
+        <textarea rows="4" cols="50">
+          Scheduling of Calendar goes here.
+        </textarea>
+        <button class="saveBtn">Save</button>
+      </div>
+      <div class="row"> 
+        <div class ="hour">4:00PM</div>
+        <textarea rows="4" cols="50">
+          Scheduling of Calendar goes here.
+        </textarea>
+        <button class="saveBtn">Save</button>
+      </div>
+      <div class="row"> 
+        <div class ="hour">5:00PM</div>
+        <textarea rows="4" cols="50">
+          Scheduling of Calendar goes here.
+        </textarea>
+        <button class="saveBtn">Save</button>
+      </div>
+
+
+      
               
                
     </div>
@@ -45,6 +107,8 @@
     var today = moment().format('dddd'); 
     var date = moment().format("MMM Do"); 
     $("#currentDay").text(today + " " + date);
+
+
 
     
     </script>
