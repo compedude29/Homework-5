@@ -47,28 +47,28 @@
 
         <div class="col-8 p-0">
           <div class="time-block">
-            <textarea  class="description" rows="4" cols="80"></textarea>
-            <textarea  class="description" rows="4" cols="80"></textarea>
-            <textarea  class="description" rows="4" cols="80"></textarea>
-            <textarea  class="description" rows="4" cols="80"></textarea>
-            <textarea  class="description" rows="4" cols="80"></textarea>
-            <textarea  class="description" rows="4" cols="80"></textarea>
-            <textarea  class="description" rows="4" cols="80"></textarea>
-            <textarea  class="description" rows="4" cols="80"></textarea>
-            <textarea  class="description" rows="4" cols="80"></textarea>
+            <textarea  class="description" id="nineText" rows="4" cols="80"></textarea>
+            <textarea  class="description" id="tenText" rows="4" cols="80"></textarea>
+            <textarea  class="description" id="elevenText" rows="4" cols="80"></textarea>
+            <textarea  class="description" id="twelveText" rows="4" cols="80"></textarea>
+            <textarea  class="description" id="oneText" rows="4" cols="80"></textarea>
+            <textarea  class="description" id="twoText" rows="4" cols="80"></textarea>
+            <textarea  class="description" id="threeText" rows="4" cols="80"></textarea>
+            <textarea  class="description" id="fourText" rows="4" cols="80"></textarea>
+            <textarea  class="description" id="fiveText" rows="4" cols="80"></textarea>
           </div>
         </div>
 
         <div class="col-1 p-0">
-          <button class="saveBtn">Save</button>
-          <button class="saveBtn">Save</button>
-          <button class="saveBtn">Save</button>
-          <button class="saveBtn">Save</button>
-          <button class="saveBtn">Save</button>
-          <button class="saveBtn">Save</button>
-          <button class="saveBtn">Save</button>       
-          <button class="saveBtn">Save</button>
-          <button class="saveBtn">Save</button>
+          <button class="saveBtn" id="nineBtn">Save</button>
+          <button class="saveBtn" id="tenBtn">Save</button>
+          <button class="saveBtn" id="elevenBtn">Save</button>
+          <button class="saveBtn" id="twelveBtn">Save</button>
+          <button class="saveBtn" id="oneBtn">Save</button>
+          <button class="saveBtn" id="twoBtn">Save</button>
+          <button class="saveBtn" id="threeBtn">Save</button>
+          <button class="saveBtn" id="fourBtn">Save</button>
+          <button class="saveBtn" id="fiveBtn">Save</button>
         </div>
 
       </div>  
@@ -76,13 +76,184 @@
     
 
     <script type="text/javascript">
+
     var today = moment().format('dddd'); 
     var date = moment().format("MMM Do"); 
     $("#currentDay").text(today + " " + date);
 
 
+    $("#nineBtn").click(function(){
+    var textInput = $("#nineText").val();
+    console.log(textInput)
+    localStorage.setItem('nine', JSON.stringify(textInput));
+    });
 
-    
+    $("#tenBtn").click(function(){
+    var textInput = $("#tenText").val();
+    console.log(textInput)
+    localStorage.setItem('ten', JSON.stringify(textInput));
+    });
+
+    $("#elevenBtn").click(function(){
+    var textInput = $("#elevenText").val();
+    console.log(textInput)
+    localStorage.setItem('eleven', JSON.stringify(textInput));
+    });
+
+    $("#twelveBtn").click(function(){
+    var textInput = $("#twelveText").val();
+    console.log(textInput)
+    localStorage.setItem('twelve', JSON.stringify(textInput));
+    });
+
+    $("#oneBtn").click(function(){
+    var textInput = $("#oneText").val();
+    console.log(textInput)
+    localStorage.setItem('one', JSON.stringify(textInput));
+    });
+
+    $("#twoBtn").click(function(){
+    var textInput = $("#twoText").val();
+    console.log(textInput)
+    localStorage.setItem('two', JSON.stringify(textInput));
+    });
+
+    $("#threeBtn").click(function(){
+    var textInput = $("#threeText").val();
+    console.log(textInput)
+    localStorage.setItem('three', JSON.stringify(textInput));
+    });
+
+    $("#fourBtn").click(function(){
+    var textInput = $("#fourText").val();
+    console.log(textInput)
+    localStorage.setItem('four', JSON.stringify(textInput));
+    });
+
+    $("#fiveBtn").click(function(){
+    var textInput = $("#fiveText").val();
+    console.log(textInput)
+    localStorage.setItem('five', JSON.stringify(textInput));
+    });
+
+
+    var nine = JSON.parse(localStorage.getItem('nine'));
+    $("#nineText").val(nine);
+    var ten = JSON.parse(localStorage.getItem('ten'));
+    $("#tenText").val(ten);
+    var eleven = JSON.parse(localStorage.getItem('eleven'));
+    $("#elevenText").val(eleven);
+    var twelve = JSON.parse(localStorage.getItem('twelve'));
+    $("#twelveText").val(twelve);
+    var one = JSON.parse(localStorage.getItem('one'));
+    $("#oneText").val(one);
+    var two = JSON.parse(localStorage.getItem('two'));
+    $("#twoText").val(two);
+    var three = JSON.parse(localStorage.getItem('three'));
+    $("#threeText").val(three);
+    var four = JSON.parse(localStorage.getItem('four'));
+    $("#fourText").val(four);
+    var five = JSON.parse(localStorage.getItem('five'));
+    $("#fiveText").val(five);
+
+
+    var tFormat = 'HH:mm:ss'
+
+    function future(){
+    if(moment().isBefore(moment('08:59:59', tFormat))){
+        $("#nineText").css("background-color","green")
+    }
+    if(moment().isBefore(moment('09:59:59', tFormat))){
+        $("#tenText").css("background-color","green")
+    }
+    if(moment().isBefore(moment('10:59:59', tFormat))){
+        $("#elevanamtextarea").css("background-color","green")
+    }
+    if(moment().isBefore(moment('11:59:59', tFormat))){
+        $("#twelveText").css("background-color","green")
+    }
+    if(moment().isBefore(moment('12:59:59', tFormat))){
+        $("#oneText").css("background-color","green")
+    }
+    if(moment().isBefore(moment('13:59:59', tFormat))){
+        $("#twoText").css("background-color","green")
+    }
+    if(moment().isBefore(moment('14:59:59', tFormat))){
+        $("#threeText").css("background-color","green")
+    }
+    if(moment().isBefore(moment('15:59:59', tFormat))){
+        $("#fourText").css("background-color","green")
+    }
+    if(moment().isBefore(moment('16:59:59', tFormat))){
+        $("#fiveText").css("background-color","green")
+    }
+
+    }
+
+    function current(){
+    if (moment().isBetween(moment('09:00:00', tFormat), moment('09:59:59', tFormat))) {
+        $("#nineText").css("background-color","red")
+    }
+    if (moment().isBetween(moment('10:00:00', tFormat), moment('10:59:59', tFormat))) {
+        $("#tenText").css("background-color","red")
+    }
+    if (moment().isBetween(moment('11:00:00', tFormat), moment('11:59:59', tFormat))) {
+        $("#elevenText").css("background-color","red")
+    }
+    if (moment().isBetween(moment('12:00:00', tFormat), moment('12:59:59', tFormat))) {
+        $("#twelveText").css("background-color","red")
+    }
+    if (moment().isBetween(moment('13:00:00', tFormat), moment('13:59:59', tFormat))) {
+        $("#oneText").css("background-color","red")
+    }
+    if (moment().isBetween(moment('14:00:00', tFormat), moment('14:59:59', tFormat))) {
+        $("#twoText").css("background-color","red")
+    }
+    if (moment().isBetween(moment('15:00:00', tFormat), moment('15:59:59', tFormat))) {
+        $("#threeText").css("background-color","red")
+    }
+    if (moment().isBetween(moment('16:00:00', tFormat), moment('16:59:59', tFormat))) {
+        $("#fourText").css("background-color","red")
+    }
+    if (moment().isBetween(moment('17:00:00', tFormat), moment('17:59:59', tFormat))) {
+        $("#fiveText").css("background-color","red")
+    }
+    }
+
+    function past(){
+    if(moment().isAfter(moment('08:00:00', tFormat))){
+        $("#nineText").css("background-color","lightgray")
+    }
+    if(moment().isAfter(moment('09:00:00', tFormat))){
+        $("#tenText").css("background-color","lightgray")
+    }
+    if(moment().isAfter(moment('10:00:00', tFormat))){
+        $("#elevenText").css("background-color","lightgray")
+    }
+    if(moment().isAfter(moment('11:00:00', tFormat))){
+        $("#twelveText").css("background-color","lightgray")
+    }
+    if(moment().isAfter(moment('12:00:00', tFormat))){
+        $("#oneText").css("background-color","lightgray")
+    }
+    if(moment().isAfter(moment('13:00:00', tFormat))){
+        $("#twoText").css("background-color","lightgray")
+    }
+    if(moment().isAfter(moment('14:00:00', tFormat))){
+        $("#threeText").css("background-color","lightgray")
+    }
+    if(moment().isAfter(moment('15:00:00', tFormat))){
+        $("#fourText").css("background-color","lightgray")
+    }
+    if(moment().isAfter(moment('16:00:00', tFormat))){
+        $("#fiveText").css("background-color","lightgray")
+    }
+    }
+
+    past();
+    current();
+    future();
+
     </script>
 
    
